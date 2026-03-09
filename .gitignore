@@ -1,0 +1,16 @@
+# IDEA
+.idea/
+
+# VS Code
+.vscode/
+
+# MAC OS
+.DS_Store
+
+node_modules/
+dist/
+LICENSE
+*.local
+*.log
+TODOs.md
+.eslintcache
