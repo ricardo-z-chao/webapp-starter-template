@@ -8,7 +8,20 @@
     "format": "prettier --write --cache .",
     "lint": "eslint --cache .",
     "lint:css": "stylelint '**/*.{css,scss,sass,vue,html}' --config stylelint.config.ts --fix",
-    "typecheck": "vue-tsc -p tsconfig.base.json"
+    "typecheck": "vue-tsc -p tsconfig.base.json",
+    "prepare": "node .husky/install.js"
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": [
+      "prettier --write --cache",
+      "eslint --cache"
+    ],
+    "*.{css,html}": [
+      "prettier --write --cache"
+    ],
+    "*.{css,html,vue}": [
+      "stylelint --config stylelint.config.ts --fix"
+    ]
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -17,7 +30,9 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.4.0",
+    "husky": "^9.1.7",
     "jiti": "^2.6.1",
+    "lint-staged": "^16.4.0",
     "postcss-html": "^1.8.1",
     "prettier": "^3.8.1",
     "stylelint": "^17.4.0",
