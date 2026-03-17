@@ -6,5 +6,5 @@ export default {
     "stylelint-config-html/vue",
     "stylelint-config-html/html",
   ],
-  ignoreFiles: ["dist/**/*"],
+  ignoreFiles: ["**/dist/**/*"],
 } satisfies Config;
